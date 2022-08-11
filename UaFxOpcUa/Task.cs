@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tasker
+namespace OpcUaForTrubodetal
 {
     using System;
     using System.Collections.Generic;

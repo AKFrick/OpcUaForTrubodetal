@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tasker.Model
+namespace OpcUaForTrubodetal
 {
     public class ItemLenSet
     {
-
         public ItemLenData[] itemLenData = new ItemLenData[15];
         public ItemLenSet(ProductionTaskExtended task)
         {

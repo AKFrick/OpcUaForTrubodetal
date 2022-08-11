@@ -14,15 +14,25 @@
             <RowDefinition Height="200"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="tbOutput" Grid.Row="1" 
-                   TextWrapping="Wrap"
-                   Text="{Binding MyText}"
-                   VerticalAlignment="Stretch"
-                   HorizontalAlignment="Stretch"
-                   Background="AliceBlue"
-                   Padding="5,5,5,5"                    
-        />
-        <Button Content="Button" HorizontalAlignment="Stretch"  Margin="5,5,5,5" VerticalAlignment="Stretch" Command="{Binding MyCommand}"/>
+        <ListBox  x:Name="lbOutput" Grid.Row="1"
+                  VerticalAlignment="Stretch"
+                  HorizontalAlignment="Stretch"
+                  ItemsSource="{Binding OutputList}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0"  Height="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding TimeStamp, Mode=OneWay}"/>
+                        <TextBox Grid.Column="1"  Height="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding Message, Mode=OneWay}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="Отправить" Command="{Binding MyCommand}" Margin="590,10,10,90"/>
+
 
 
     </Grid>

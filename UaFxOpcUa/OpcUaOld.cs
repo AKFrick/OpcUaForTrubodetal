@@ -4,7 +4,7 @@ using Opc.UaFx.Client;
 using Opc.UaFx;
 using System.Windows;
 
-namespace Tasker.Model
+namespace OpcUaForTrubodetal
 {
     /// <summary>
     /// Связь с ПЛК через OPC UA
